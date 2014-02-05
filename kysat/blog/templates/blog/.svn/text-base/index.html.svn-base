@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<div id="blog-page">
+<h1 class="heading">KySat2 Blog</h1>
+{% if latest_post_list %}
+    {% for post in latest_post_list %}
+    <div class="post">
+        <h1 class="title">{{ post.title }}</h1>
+        <h2 class="date">{{ post.date }}</h2>
+        <div class="post-content">{{ post.content }}</div>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>No posts in database!</p>
+{% endif %}
+</div>
+{% endblock %}

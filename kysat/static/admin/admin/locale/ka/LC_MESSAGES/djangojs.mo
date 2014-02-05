@@ -1,0 +1,1 @@
+../../../../../../../../../share/pyshared/django/contrib/admin/locale/ka/LC_MESSAGES/djangojs.mo

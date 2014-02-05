@@ -1,0 +1,37 @@
+//
+// loading.less - Loading Layer Styles
+//
+
+#loading {
+    z-index:@loadingMaskZ;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:@black;
+
+    .load-logo {
+        position:fixed;
+        left:50%;
+        top:50%;
+        margin-left:(-(@logoImgWidth / 2));
+        margin-top:(-((@logoImgHeight / 2) + @loadingYNeg));
+        display:none;
+    }
+
+    .load-progress {
+        display:none;
+        position:fixed;
+        left:50%;
+        top:50%;
+        margin-left:(-(@loadingBarWidth / 2));
+        margin-top:((@logoImgHeight / 2) + -(@loadingYNeg) - 40px);
+        width:(@loadingBarWidth - 2);
+        height:(@loadingBarHeight - 2);
+        border:1px solid white;
+        .load-fill {
+            background:@gray;
+            width:0%;
+            height:100%;
+        }
+    }
+}

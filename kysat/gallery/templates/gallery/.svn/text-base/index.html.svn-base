@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<div id="gallery-page">
+<h1 class="heading">KySat2 Gallery</h1>
+{% if latest_gallery_list %}
+    <ul class="images">
+    {% for image in latest_gallery_list %}
+        <li><a href="{{ image.image.url }}" target="_blank"><img src="{{ image.image.url }}" title="{{ image.title }}"></a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No gallery images in database!</p>
+{% endif %}
+</div>
+{% endblock %}

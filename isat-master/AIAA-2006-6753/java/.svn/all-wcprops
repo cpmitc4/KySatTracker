@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java
+END
+SatElsetException.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/SatElsetException.java
+END
+SatElset.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/SatElset.java
+END
+ObjectDecayed.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/ObjectDecayed.java
+END
+ValueOutOfRangeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/ValueOutOfRangeException.java
+END
+ElsetRec.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/ElsetRec.java
+END
+Sgp4Data.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/Sgp4Data.java
+END
+DeepSpaceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/DeepSpaceType.java
+END
+NearEarthType.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/NearEarthType.java
+END
+Sgp4Unit.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/k2web/!svn/ver/2/isat-master/AIAA-2006-6753/java/Sgp4Unit.java
+END

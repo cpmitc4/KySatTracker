@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block body %}
+<div id="about-page">
+<h1 class="heading">About KySat2</h1>
+<p>TODO: About/Help Contents Here</p>
+</div>
+{% endblock %}

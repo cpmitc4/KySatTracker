@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/k2web/!svn/ver/2/isat-master/tests
+END
+VERIFICATION-RESULTS-DATA.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/k2web/!svn/ver/2/isat-master/tests/VERIFICATION-RESULTS-DATA.txt
+END
+verify_results.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/k2web/!svn/ver/2/isat-master/tests/verify_results.py
+END
+VERIFICATION-RESULTS-DATAOUT.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/tests/VERIFICATION-RESULTS-DATAOUT.txt
+END

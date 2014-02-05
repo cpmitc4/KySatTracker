@@ -1,0 +1,54 @@
+//
+// toolbar.less - Toolbar Style
+//
+
+#toolbar {
+    position:fixed;
+    z-index:@toolbarZ;
+    display:block;
+    .box-sizing(border-box);
+    width:100%;
+    height:@toolbarHeight;
+    #gradient.vertical(@toolbarGradientFrom, @toolbarGradientTo);
+    border-bottom:1px solid @toolbarBorderColor;
+    .box-shadow(0px 0px 5px rgba(0,0,0,.5));
+
+    .logo {
+        .unselectable;
+        height:@toolbarHeight;
+        padding:0 ((@toolbarHeight - @logoHeight) / 2);
+        line-height:@toolbarHeight;
+        color:@logoColor;
+        font-family:@logoFont;
+        font-size:@logoHeight;
+        font-weight:bold;
+    }
+
+    .nav {
+        float:right;
+        display:inline-block;
+        list-style-type:none;
+        height:(@toolbarHeight - 1);
+        padding:0;
+        margin:0;
+        line-height:@toolbarHeight;
+        border-left:1px solid @toolbarNavBorderColorR;
+        border-right:1px solid @toolbarNavBorderColorL;
+        li {
+            float:left;
+            a {
+                .unselectable;
+                display:block;
+                height:(@toolbarHeight - 1);
+                padding:0 ((@toolbarHeight - @toolbarNavFontSize) / 2);
+                color:@toolbarNavFontColor;
+                font-size:@toolbarNavFontSize;
+                border-left:1px solid @toolbarNavBorderColorL;
+                border-right:1px solid @toolbarNavBorderColorR;
+                &:hover  { .box-shadow(0px 0px 20px rgba(255,255,255,.2) inset); }
+                &:active { .box-shadow(0px 0px 20px rgba(0,0,0,.2) inset);       }
+            }
+        }
+
+    }
+}

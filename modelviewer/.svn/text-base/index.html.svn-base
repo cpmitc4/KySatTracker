@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- TODOKYS2 Need to draw to an existing canvas so it'll be easier to integrate with the site template code -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WebGL 3D model viewer using three.js</title>
+  <script src="viewer/three.min.js"></script>
+  <script src="viewer/OrbitControls.js"></script>
+  <script src="viewer/OBJLoader.js"></script>
+  <script src="viewer/Detector.js"></script>
+</head>
+<body>
+ 
+  <script>
+	var container;
+	var camera, scene, renderer;
+	var mouseX = 0, mouseY = 0;
+	 
+	var windowHalfX = window.innerWidth / 2;
+	var windowHalfY = window.innerHeight / 2;
+	 
+	init();
+	animate();
+	 
+	 
+	 
+	/*** Initialize ***/
+	function init() {
+	  // This <div> will host the canvas for our scene.
+	  // TodoKYS2: change this to a canvas element in the HTML
+	  container = document.createElement( 'div' );
+	  document.body.appendChild( container );
+	 
+	  // You can adjust the cameras distance and set the FOV to something
+	  // different than 45°. The last two values set the clippling plane.
+	  camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+	  camera.position.z = 100;
+	 
+	  // These variables set the camera behaviour and sensitivity.
+	  // TodoKYS2: Find better controls than OrbitControls. Working on testing the various default controls
+	  // to find which ones work the best.
+	  controls = new THREE.OrbitControls( camera );
+	  controls.userRotateSpeed = 5.0;
+	  controls.userZoomSpeed = 5;
+	  controls.userPanSpeed = 2;
+	  controls.userPan = false;
+	  controls.userZoom = true;
+	  controls.userRotate = true;	  
+	  controls.autoRotate = false;
+	 
+	  // This is the scene we will add all objects to.
+	  scene = new THREE.Scene();
+	 
+	  // You can set the color of the ambient light to any value.
+	  // TODOKYS2 - determine if this should potentially be darker...
+	  // currently it's white light
+	  var ambient = new THREE.AmbientLight( 0xffffff );
+	  scene.add( ambient );
+	 
+	  // Uncomment these lines to create a simple directional light.
+	  // var directionalLight = new THREE.DirectionalLight( 0xffeedd );
+	  // directionalLight.position.set( 0, 0, 1 ).normalize();
+	  // scene.add( directionalLight );
+	 
+	  /*** Texture Loading ***/
+	  var texture = new THREE.Texture();
+	  var loader = new THREE.ImageLoader();
+	 
+	  // You can set the texture properties in this function.
+	  loader.addEventListener( 'load', function ( event ) {
+		texture.image = event.content;
+		texture.needsUpdate = true;
+		// TODO: determine if these settings are the best filter settings for our textures
+		texture.magFilter = THREE.NearestFilter;
+		texture.minFilter = THREE.NearestMipMapLinearFilter;
+	 
+	  } );
+	 
+	  // This string has to be the path to your texture file.
+	  loader.load( 'models/Marcos_texture2.png' );
+	 
+	 
+	 
+	  /*** OBJ Loading ***/
+	  var loader = new THREE.OBJLoader();
+	 
+	  // As soon as the OBJ has been loaded this function looks for a mesh
+	  // inside the data and applies the texture to it.
+	  loader.addEventListener( 'load', function ( event ) {
+		var object = event.content;
+		object.traverse( function ( child ) {
+		  if ( child instanceof THREE.Mesh ) {
+			child.material.map = texture;
+		  }
+		} );
+	 
+		// My initial model was too small, so I scaled it upwards.
+		object.scale = new THREE.Vector3( 5, 5, 5 );
+	 
+		// You can change the position of the object, so that it is not
+		// centered in the view and leaves some space for overlay text.
+		object.position.y -= 2.5;
+		scene.add( object );
+	  });
+	 
+	  // This string has to be the path to your object file.
+	  loader.load( 'models/body.obj' );
+	 
+	  // We set the renderer to the size of the window and
+	  // append a canvas to our HTML page.
+	  // TODOKYS2 - draw this to an existing canvas
+	  renderer = new THREE.WebGLRenderer();
+	  renderer.setSize( window.innerWidth, window.innerHeight );
+	  container.appendChild( renderer.domElement );
+	}
+	 
+	 
+	 
+	/*** The Loop ***/
+	function animate() {
+	  // This function calls itself on every frame. You can for example change
+	  // the objects rotation on every call to create a turntable animation.
+	  requestAnimationFrame( animate );
+	 
+	  // On every frame we need to calculate the new camera position
+	  // and have it look exactly at the center of our scene.
+	  controls.update();
+	  camera.lookAt(scene.position);
+	  renderer.render(scene, camera);
+	}
+  </script>
+ 
+</body>
+</html>

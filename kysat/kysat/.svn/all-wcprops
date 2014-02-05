@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/k2web/!svn/ver/26/kysat/kysat
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/k2web/!svn/ver/23/kysat/kysat/urls.py
+END
+wsgi.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/k2web/!svn/ver/16/kysat/kysat/wsgi.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/k2web/!svn/ver/26/kysat/kysat/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/k2web/!svn/ver/16/kysat/kysat/__init__.py
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/k2web/!svn/ver/23/kysat/kysat/settings.py
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/k2web/!svn/ver/2/isat-master/science-sats
+END
+find_science_ids.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/k2web/!svn/ver/2/isat-master/science-sats/find_science_ids.py
+END
+NASA-Satellites-for-SkyWatch.csv
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/k2web/!svn/ver/2/isat-master/science-sats/NASA-Satellites-for-SkyWatch.csv
+END
+get_celestrak_files.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/k2web/!svn/ver/2/isat-master/science-sats/get_celestrak_files.py
+END
+missions_mission_titles_phases.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/k2web/!svn/ver/2/isat-master/science-sats/missions_mission_titles_phases.csv
+END
+skywatch-picklist.info
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/k2web/!svn/ver/2/isat-master/science-sats/skywatch-picklist.info
+END
+get_science_sats.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/k2web/!svn/ver/2/isat-master/science-sats/get_science_sats.py
+END

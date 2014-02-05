@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/k2web/!svn/ver/16/kysat/blog
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/k2web/!svn/ver/16/kysat/blog/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/k2web/!svn/ver/16/kysat/blog/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/k2web/!svn/ver/16/kysat/blog/urls.py
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/k2web/!svn/ver/16/kysat/blog/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/k2web/!svn/ver/16/kysat/blog/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/k2web/!svn/ver/16/kysat/blog/__init__.py
+END

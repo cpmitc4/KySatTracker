@@ -1,0 +1,58 @@
+Alias /cesium/ /vagrant/kysat/static/cesium/
+Alias /css/ /vagrant/kysat/static/css/
+Alias /img/ /vagrant/kysat/static/img/
+Alias /images/ /vagrant/kysat/static/images/
+Alias /js/ /vagrant/kysat/static/js/
+Alias /tle/ /vagrant/kysat/static/tle/
+Alias /static/ /vagrant/kysat/static/
+Alias /media/ /vagrant/kysat/media/
+
+<Directory /vagrant/kysat/static/cesium>
+Order deny,allow
+Allow from all
+</Directory>
+
+<Directory /vagrant/kysat/static/css>
+Order deny,allow
+Allow from all
+</Directory>
+
+<Directory /vagrant/kysat/static/img>
+Order deny,allow
+Allow from all
+</Directory>
+
+<Directory /vagrant/kysat/static/images>
+Order deny,allow
+Allow from all
+</Directory>
+
+<Directory /vagrant/kysat/static/js>
+Order deny,allow
+Allow from all
+</Directory>
+
+<Directory /vagrant/kysat/static/tle>
+Order deny,allow
+Allow from all
+</Directory>
+
+<Directory /vagrant/kysat/static>
+Order deny,allow
+Allow from all
+</Directory>
+
+<Directory /vagrant/kysat/media>
+Order deny,allow
+Allow from all
+</Directory>
+
+WSGIScriptAlias / /vagrant/kysat/kysat/wsgi.py
+WSGIPythonPath /vagrant/kysat/
+
+<Directory /vagrant/kysat/kysat>
+<Files wsgi.py>
+Order deny,allow
+Allow from all
+</Files>
+</Directory>

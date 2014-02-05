@@ -1,0 +1,322 @@
+{% extends 'base.html' %}
+{% block body %}
+  
+<!-- index.html - Main HTML page for satellite tracker                      -->
+<!-- Copyright (c) 2013 NASA                                                -->
+<!-- All rights reserved                                                    -->
+<!-- Original author: Koansys                                               -->
+<!-- Modified by Jordan Montgomery <elijah.montgomery@uky.edu>              -->
+<!-- Sourced from iSat, by Koansys https://github.com/koansys/isat          -->
+<!-- Interface page for satellite tracker contains canvas and buttons for user interface-->
+<!-- Licensed under 2-clause BSD license. See ../LICENSE.txt                -->
+<!-- For more information, see ../KYSAT2-README.txt, ../KOANSYS-README.txt or contact -->
+<!-- the original authors.                                                  -->
+
+
+<! Loading Bar -->
+<div id="loading">
+	<div class = "load-progress">
+		<div class="load-fill">
+		</div>
+	</div>
+</div>
+<!-- end of loading -->
+
+
+
+
+<!-- Toolbar -->
+<div id="toolbar">
+  <a class="logo">Kentucky Space Satellite Tracker</a>
+  <ul class="nav">
+  </ul>
+</div>
+<!-- End Toolbar -->
+
+<script src="js/app.js"></
+
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<script>
+  opsmode = 'i'; //GLOBAL for intl, 'i'mproved
+
+  // Changed KYS2 3/30/13 to remove branding
+  // Pre-loading Images
+  Title = new Image();
+  Title.src = '/images/Title.png'
+  NASA_logo = new Image();
+  NASA_logo.src = '/images/NASA_logo.png'
+  Zoom_out = new Image();
+  Zoom_out.src = '/images/Zoom_out.png'
+  Zoom_in = new Image();
+  Zoom_in.src = '/images/Zoom_in.png'
+  Refresh_1 = new Image();
+  Refresh_1.src = '/images/Refresh_1.png'
+  Refresh_2 = new Image();
+  Refresh_2.src = '/images/Refresh_2.png'
+  Info_1 = new Image();
+  Info_1.src = '/images/Info_1.png'
+  Info_2 = new Image();
+  Info_2.src = '/images/Info_2.png'
+  Orbit_1 = new Image();
+  Orbit_1.src = '/images/Orbit_1.png'
+  Orbit_2 = new Image();
+  Orbit_2.src = '/images/Orbit_2.png'
+  Satellite_1 = new Image();
+  Satellite_1.src = '/images/Satellite_1.png'
+  Satellite_2 = new Image();
+  Satellite_2.src = '/images/Satellite_2.png'
+  Expand_1 = new Image();
+  Expand_1.src = '/images/Expand_1.png'
+  Expand_2 = new Image();
+  Expand_2.src = '/images/Expand_2b.png'
+  Pause_1 = new Image();
+  Pause_1.src = '/images/Pause_1.png'
+  Pause_2 = new Image();
+  Pause_2.src = '/images/Pause_2.png'
+  Play_1 = new Image();
+  Play_1.src = '/images/Play_1.png'
+  Play_2 = new Image();
+  Play_2.src = '/images/Play_2.png'
+</script>
+
+<script type="text/javascript" src="/js/twoline2rv.js"></script>
+<script type="text/javascript" src="/js/getgravc.js"></script>
+<script type="text/javascript" src="/js/days2mdh.js"></script>
+<script type="text/javascript" src="/js/jday.js"></script>
+<script type="text/javascript" src="/js/sgp4init.js"></script>
+<script type="text/javascript" src="/js/initl.js"></script>
+<script type="text/javascript" src="/js/gstime.js"></script>
+<script type="text/javascript" src="/js/sgp4.js"></script>
+
+<script type="text/javascript" src="/js/dscom.js"></script>
+<script type="text/javascript" src="/js/dpper.js"></script>
+<script type="text/javascript" src="/js/dsinit.js"></script>
+<script type="text/javascript" src="/js/dspace.js"></script>
+
+<script type="text/javascript" src="/js/tle.js"></script>
+
+<script type="text/javascript" src="/cesium/Cesium.js"></script>
+<script type="text/javascript" src="/js/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" src="/js/modernizr_load.js"></script>
+
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/tracker.css">
+    <div id="wrapper">
+      <header id="header">
+      </header>
+      <div id="main" style="position: absolute; left: 0px; right: 0px; top: 50px; bottom: 0px; overflow:hidden;" >
+        <!-- CHANGED KYS2 Comment added to explain how to modify the buttons -->
+        <!-- Changing these buttons is easy. index.js uses document.getElementById() and looks for
+             zoom_out, zoom_in, etc. so as long as there's something with the right name we're good -->
+        <div id="cesiumContainer">
+          <div class="popup" id="satellite_popup"></div>
+          <div id="zoom_buttons" class="modal">
+            <img src="/images/Zoom_out.png"
+                 id="zoom_out"
+                 title="Zoom Out"
+                 alt="Zoom Out"
+                 class="zoom_button" />
+            <img src="/images/Zoom_in.png"
+                 id="zoom_in"
+                 title="Zoom In"
+                 alt="Zoom In"
+                 class="zoom_button" />
+          </div>
+          <div id="navigation_buttons" class="modal">
+            <img src="/images/Refresh_1.png"
+                 id="reset_button"
+                 title="Reset View"
+                 alt="Reset View"
+                 class="hud_button"
+                 onmouseover="this.src='/images/Refresh_2.png'"
+                 onmouseout="this.src='/images/Refresh_1.png'"/>
+            <img src="/images/Info_1.png"
+                 id="instructions_button"
+                 title="Instructions"
+                 alt="Instructions"
+                 class="hud_button"
+                 onmouseover="this.src='/images/Info_2.png'"
+                 onmouseout="this.src='/images/Info_1.png'"/>
+            <img src="/images/Orbit_1.png"
+                 id="display_button"
+                 title="Display Options"
+                 alt="Display Options"
+                 class="hud_button"
+                 onmouseover="this.src='/images/Orbit_2.png'"
+                 onmouseout="this.src='/images/Orbit_1.png'"/>
+            <img src="/images/Satellite_1.png"
+                 id="satellite_button"
+                 title="Select Satellites"
+                 alt="Select Satellites"
+                 class="hud_button"
+                 onmouseover="this.src='/images/Satellite_2.png'"
+                 onmouseout="this.src='/images/Satellite_1.png'"/>
+            <img src="/images/Expand_1.png"
+                 id="fullscreen_button"
+                 title="Full Screen Toggle"
+                 alt="Full Screen Toggle"
+                 class="hud_button"
+                 onmouseover="this.src='/images/Expand_2b.png'"
+                 onmouseout="this.src='/images/Expand_1.png'"/>
+          </div> <!-- navigation_buttons -->
+          <!-- Cesium jQuery updates this with onResize at startup -->
+          <canvas id="glCanvas" width="300" height="300" tabindex="1"></canvas>
+          <div id="instructions" class="modal">
+            <img src="/images/close.png"
+                 id="instructions_close"
+                 title="Close Window"
+                 alt="Close Window"
+                 class="close_button" />
+            <h2>
+              Instructions
+            </h2>
+            <!-- Changed KYS2 to reflect our changes -->
+            <p>The satellites are displayed based on their calculated positions in orbit.</p>
+            <p>Hover your cursor over a satellite to see its name. Click on a satellite to bring up details about that satellite, including links to more information about it from Science.nasa.gov and National Space Science Data Center (NSSDC).</p>
+            <p>Zoom in for a closer look at a satellite's orbit. Zoom out to see satellites in larger orbits and further distances from Earth.</p>
+            <p>Click and drag to rotate the Earth.</p>
+            <p>Click on the Globe Display icon to choose the type of map and perspective you are viewing.</p>
+            <p>If you shared your location with your browser a marker will indicate this position on the map.</p>
+            <p>The orbit displayed initially is that of KYSat-2</p>
+          </div> <!-- /instructions -->
+          <div id="satellite_form" class="modal">
+            <img src="/images/close.png"
+                 id="satellite_form_close"
+                 title="Close Window"
+                 alt="Close Window"
+                 class="close_button" />
+            <!-- <input type="button" id="satellite_form_close" value="&times;" class="close_button" /> -->
+            <form id="controls">
+              <fieldset>
+                <legend>
+                  Select a Satellite:
+                </legend>
+                <dl id="controls_satellite">
+                  <!-- CHANGED KYS2 to remove satellite group selector -->
+                  <dt>
+                    <label for="select_satellite">Select Satellite:</label>
+                  </dt>
+                  <dd>
+                    <select id="select_satellite">
+                    </select>
+                  </dd>
+                </dl> <!-- /controls_satellite -->
+              </fieldset>
+            </form>
+          </div> <!-- /satellite_form -->
+          <div id="map_display" class="modal">
+            <img src="/images/close.png"
+                 id="map_display_close"
+                 title="Close Window"
+                 alt="Close Window"
+                 class="close_button" />
+            <h2>Visual Settings</h2>
+            <div id="maps">
+              <img src="/images/Map_Displays.png" alt="Map Display"><br>
+              <img src="/images/Bing_1.png"
+                   id="bing_data_button"
+                   title="Select Bing Map"
+                   alt="Select Bing Map"
+                   onmouseover="this.src='/images/Bing_2.png'"
+                   onmouseout="this.src='/images/Bing_1.png'"/>
+              <img src="/images/OpenStreet_1.png"
+                   id="osm_data_button"
+                   title="Select OSM Map"
+                   alt="Select OSM Map"
+                   onmouseover="this.src='/images/OpenStreet_2.png'"
+                   onmouseout="this.src='/images/OpenStreet_1.png'"/>
+              <img src="/images/ArcGis_1.png"
+                   id="arcgis_data_button"
+                   title="Select ArcGIS Map"
+                   alt="Select ArcGIS Map"
+                   onmouseover="this.src='/images/ArcGis_2.png'"
+                   onmouseout="this.src='/images/ArcGis_1.png'"/>
+              <img src="/images/Offline_1.png"
+                   id="static_data_button"
+                   title="Select Offline Map"
+                   alt="Select Offline Map"
+                   onmouseover="this.src='/images/Offline_2.png'"
+                   onmouseout="this.src='/images/Offline_1.png'"/>
+            </div><br> <!-- /map_display -->
+            <div id="perpective">
+              <img src="/images/Perspective.png" alt="Perspective"><br>
+              <img src="/images/3D_1.png"
+                   id="three_d_display_button"
+                   title="Display 3D"
+                   alt="Display 3D"
+                   onmouseover="this.src='/images/3D_2.png'"
+                   onmouseout="this.src='/images/3D_1.png'"
+                   class="perspective_button" />
+              <img src="/images/2.5D_1.png"
+                   id="columbus_display_button"
+                   title="Display Columbus View"
+                   alt="Display Columbus View"
+                   onmouseover="this.src='/images/2.5D_2.png'"
+                   onmouseout="this.src='/images/2.5D_1.png'"
+                   class="perspective_button" />
+              <img src="/images/2D_1.png"
+                   id="two_d_display_button"
+                   title="Display 2D"
+                   alt="Display 2D"
+                   onmouseover="this.src='/images/2D_2.png'"
+                   onmouseout="this.src='/images/2D_1.png'"
+                   class="perspective_button" />
+            </div> <!-- /perspective -->
+          </div> <!-- /map_display -->
+          <div id="satellite_display" class="modal">
+            <img src="/images/close.png"
+                 id="satellite_display_close"
+                 title="Close Window"
+                 alt="Close Window"
+                 class="close_button" />
+            <h2 id="satellite_name"></h2>
+            <img src="/images/Play_1.png"
+                 id="play_button"
+                 title="Play satellite location data"
+                 alt="Play satellite location data"
+                 class="play_button"
+                 onmouseover="this.src='/images/Play_2.png'"
+                 onmouseout="this.src='/images/Play_1.png'"/>
+            <img src="/images/Pause_1.png"
+                 id="pause_button"
+                 title="Pause satellite location data"
+                 alt="Pause satellite location data"
+                 class="pause_button"
+                 onmouseover="this.src='/images/Pause_2.png'"
+                 onmouseout="this.src='/images/Pause_1.png'"/>
+            <dl>
+              <dt>ID</dt>
+                <dd id="satellite_id"></dd>
+              <dt>X Km</dt>
+                <dd id="satellite_x"></dd>
+              <dt>Y Km</dt>
+                <dd id="satellite_y"></dd>
+              <dt>Z Km</dt>
+                <dd id="satellite_z"></dd>
+              <dt>Velocity</dt>
+                <dd id="satellite_velocity"></dd>
+              <dt>Latitude</dt>
+                <dd id="satellite_latitude"></dd>
+              <dt>Longitude</dt>
+                <dd id="satellite_longitude"></dd>
+              <dt>Height</dt>
+                <dd id="satellite_height"></dd>
+            </dl>
+ 	<h3>More on <span id="satellite_name2"></span></h3>
+            
+            <a href="http://www.kentuckyspace.com">Kentucky Space</a>
+
+          </div> <!-- /satellite_display -->
+        </div> <!-- /cesiumContainer -->
+      </div> <!-- /main -->
+
+ 
+    <div style="position: absolute; left: 50%; bottom: 10px;">
+        <div id="user_date" style="position: relative; left: -50%;">
+            <center><p>Local Time: <span id="local_time"></span>&nbsp;&nbsp;&nbsp;&nbsp;UTC:
+        <span id="utc_time"></span> <br>Live Tracking</center>  </p>
+        </div>
+    </div>
+
+
+{% endblock %}

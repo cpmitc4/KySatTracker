@@ -1,0 +1,287 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB
+END
+sgp4init_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/sgp4init_test.m
+END
+getgravc_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/getgravc_test.m
+END
+sgp4init.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/sgp4init.m
+END
+mag.m
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/mag.m
+END
+invjday.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/invjday.m
+END
+dscom_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dscom_test.m
+END
+dscom.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dscom.m
+END
+isequalRel.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/isequalRel.m
+END
+ONE.TLE
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/ONE.TLE
+END
+dpper_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dpper_test.m
+END
+sgp4_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/sgp4_test.m
+END
+sgp4.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/sgp4.m
+END
+initl_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/initl_test.m
+END
+initl.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/initl.m
+END
+angl_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/angl_test.m
+END
+doxygen.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/doxygen.cfg
+END
+angl.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/angl.m
+END
+toler.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/toler.m
+END
+gstime_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/gstime_test.m
+END
+dsinit_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dsinit_test.m
+END
+matlab.dot
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/matlab.dot
+END
+constmath.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/constmath.m
+END
+rv2coe.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/rv2coe.m
+END
+getgravc.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/getgravc.m
+END
+sgp4_CodeReadme.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/sgp4_CodeReadme.pdf
+END
+mag_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/mag_test.m
+END
+invjday_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/invjday_test.m
+END
+days2mdh_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/days2mdh_test.m
+END
+dpper.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dpper.m
+END
+twoline2rv_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/twoline2rv_test.m
+END
+days2mdh.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/days2mdh.m
+END
+twoline2rv.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/twoline2rv.m
+END
+newtonnu_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/newtonnu_test.m
+END
+newtonnu.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/newtonnu.m
+END
+testmat.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/testmat.m
+END
+matlabdot.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/matlabdot.pdf
+END
+jday_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/jday_test.m
+END
+jday.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/jday.m
+END
+gstime.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/gstime.m
+END
+dsinit.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dsinit.m
+END
+constastro_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/constastro_test.m
+END
+dspace_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dspace_test.m
+END
+rv2coe_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/rv2coe_test.m
+END
+constmath_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/constmath_test.m
+END
+constastro.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/constastro.m
+END
+SGP4-VER.TLE
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/SGP4-VER.TLE
+END
+dspace.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/k2web/!svn/ver/2/isat-master/Miura_Thesis_CD/SGP4%20MATLAB/dspace.m
+END

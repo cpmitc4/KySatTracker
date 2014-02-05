@@ -1,0 +1,17 @@
+//
+// base.less - Global Base Styles
+//
+
+// Set Default Font
+html {
+    font-family: @defaultFont;
+    font-size:   @defaultFontSize;
+}
+
+// Pointer Cursor for all Anchors
+// Improves UI Discoverability
+a { cursor:pointer; }
+
+html, body {
+    background:#ccc;
+}
